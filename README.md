@@ -6,8 +6,8 @@
 
 **Bark Crystal** 是一款专为 iOS Bark App 用户打造的高级 Chrome 扩展。它摒弃了繁杂的设计，采用 **800x600 黄金比例**的“Max Vision”视界，融合深色毛玻璃（Glassmorphism）美学，并内置了智能 Markdown 渲染引擎与自动草稿箱功能，为您提供极致的推送体验。
 
-![功能演示](Bark-Crystal/img/pic.png)
-![功能演示](Bark-Crystal/img/pic1.png)
+![功能演示](img/pic.png)
+![功能演示](img/pic1.png)
 
 ## ✨ 核心特性 (Core Features)
 
