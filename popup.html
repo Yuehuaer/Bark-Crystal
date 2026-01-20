@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="editor-side">
+            <header>
+                <div class="logo">Bark Crystal Pro</div>
+                
+                <div class="header-right-area">
+                    <div id="status"></div>
+                    <button id="sendBtn" class="header-send-btn">🚀 立即推送</button>
+                    <button id="settingsBtn" class="icon-btn" title="设置">⚙️</button>
+                </div>
+            </header>
+
+            <div id="mainView">
+                <input type="text" id="pushTitle" placeholder="推送标题 (Title)" class="glass-input">
+                <input type="text" id="pushSubtitle" placeholder="推送副标题 (Subtitle)" class="glass-input">
+                
+                <textarea id="pushContent" placeholder="在此输入内容...&#10;普通模式：回车即换行&#10;MD模式：支持 #标题 -列表 等语法 (自动处理换行)" class="glass-textarea"></textarea>
+                
+                <details class="advanced-options" open> <summary>高级参数 (Markdown / 分组 / 图标)</summary>
+                    <div class="options-grid">
+                        
+                        <div class="row-split-advanced">
+                            <div class="switch-container" title="开启后支持Markdown语法，并自动优化换行">
+                                <label class="switch">
+                                    <input type="checkbox" id="isMarkdown">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="switch-label">Markdown</span>
+                            </div>
+
+                            <input type="text" id="pushGroup" placeholder="分组 (Group)" class="glass-input group-input">
+                            
+                            <input type="number" id="pushBadge" placeholder="角标" class="glass-input badge-input">
+                        </div>
+
+                        <input type="text" id="pushIcon" placeholder="图标链接 (Icon URL)" class="glass-input full-width-input">
+                        <input type="text" id="pushImage" placeholder="图片链接 (Image URL)" class="glass-input full-width-input">
+                    </div>
+                </details>
+
+                <div class="tool-bar">
+                    <button id="grabUrl">🔗 抓取网页标题、链接与图标</button>
+                </div>
+            </div>
+
+            <div id="settingsView" class="hidden">
+                <label>Device Key</label>
+                <input type="text" id="deviceKey" class="glass-input">
+                <label>服务器地址</label>
+                <input type="text" id="serverUrl" class="glass-input">
+                <button id="saveBtn" class="save-btn">保存配置</button>
+            </div>
+        </div>
+
+        <div class="preview-side">
+            <div class="phone-frame">
+                <div class="phone-content">
+                    <div id="prevTitle" class="phone-title">标题预览</div>
+                    <div id="prevSubtitle" class="phone-subtitle">副标题</div>
+                    <div id="prevBody" class="phone-body">内容预览...</div>
+                    <img id="prevImage" src="" class="demo-img hidden">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

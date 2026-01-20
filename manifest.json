@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Bark Crystal",
+  "version": "1.5",
+  "description": "极简奢华 Bark 推送工具 - @Yuehuaer",
+  "permissions": ["storage", "activeTab", "contextMenus", "notifications"],
+  "host_permissions": [
+    "https://bark.yuehuakq.workers.dev/*",
+    "https://api.day.app/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
