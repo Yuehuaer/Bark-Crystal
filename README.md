@@ -1,4 +1,4 @@
-# 💎 Bark Crystal
+# 💎 Bark-Crystal
 
 > **极简、奢华、高效的 Chrome Bark 推送神器**
 >
