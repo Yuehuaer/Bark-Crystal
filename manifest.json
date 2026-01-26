@@ -1,20 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Bark Crystal",
-  "version": "1.5",
-  "description": "极简奢华 Bark 推送工具 - @Yuehuaer",
-  "permissions": ["storage", "activeTab", "contextMenus", "notifications"],
-  "host_permissions": [
-    "https://bark.yuehuakq.workers.dev/*",
-    "https://api.day.app/*"
+  "name": "Echo Notify",
+  "version": "1.0",
+  "description": "极简、双核、高效的跨设备消息推送工具。支持 Bark 与 消息推送助手。",
+  "permissions": [
+    "storage",
+    "activeTab" 
   ],
   "action": {
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "service_worker": "background.js"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "icons": {
-    "128": "icon.png"
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }

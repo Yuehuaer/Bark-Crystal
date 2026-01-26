@@ -9,64 +9,83 @@
     <div class="app-container">
         <div class="editor-side">
             <header>
-                <div class="logo">Bark Crystal Pro</div>
-                
+                <div class="logo">Echo Notify</div>
                 <div class="header-right-area">
+                    <button id="serviceSwitch" class="service-btn" title="切换推送服务">
+                        <span id="serviceName">Bark</span> 🔄
+                    </button>
                     <div id="status"></div>
                     <button id="sendBtn" class="header-send-btn">🚀 立即推送</button>
-                    <button id="settingsBtn" class="icon-btn" title="设置">⚙️</button>
+                    <button id="settingsBtn" class="icon-btn" title="配置参数">⚙️</button>
                 </div>
             </header>
 
             <div id="mainView">
-                <input type="text" id="pushTitle" placeholder="推送标题 (Title)" class="glass-input">
+                <div class="title-row">
+                    <input type="text" id="pushTitle" placeholder="推送标题 (Title)" class="glass-input title-input">
+                    <button id="clearBtn" class="clear-btn" title="清空所有内容">🧹</button>
+                </div>
+
                 <input type="text" id="pushSubtitle" placeholder="推送副标题 (Subtitle)" class="glass-input">
                 
-                <textarea id="pushContent" placeholder="在此输入内容...&#10;普通模式：回车即换行&#10;MD模式：支持 #标题 -列表 等语法 (自动处理换行)" class="glass-textarea"></textarea>
+                <textarea id="pushContent" placeholder="内容... (助手模式不支持 Markdown)" class="glass-textarea"></textarea>
                 
-                <details class="advanced-options" open> <summary>高级参数 (Markdown / 分组 / 图标)</summary>
+                <details class="advanced-options" open>
+                    <summary>高级参数 (Markdown / 分组 / 图标)</summary>
                     <div class="options-grid">
-                        
                         <div class="row-split-advanced">
-                            <div class="switch-container" title="开启后支持Markdown语法，并自动优化换行">
+                            <div class="switch-container" title="开启后自动优化换行">
                                 <label class="switch">
                                     <input type="checkbox" id="isMarkdown">
                                     <span class="slider round"></span>
                                 </label>
                                 <span class="switch-label">Markdown</span>
                             </div>
-
                             <input type="text" id="pushGroup" placeholder="分组 (Group)" class="glass-input group-input">
-                            
                             <input type="number" id="pushBadge" placeholder="角标" class="glass-input badge-input">
                         </div>
 
                         <input type="text" id="pushIcon" placeholder="图标链接 (Icon URL)" class="glass-input full-width-input">
                         <input type="text" id="pushImage" placeholder="图片链接 (Image URL)" class="glass-input full-width-input">
+                        <input type="text" id="pushUrl" placeholder="跳转链接 (Click URL)" class="glass-input full-width-input">
                     </div>
                 </details>
 
                 <div class="tool-bar">
-                    <button id="grabUrl">🔗 抓取网页标题、链接与图标</button>
+                    <button id="grabUrl">🔗 一键抓取当前网页信息</button>
                 </div>
             </div>
 
             <div id="settingsView" class="hidden">
-                <label>Device Key</label>
-                <input type="text" id="deviceKey" class="glass-input">
-                <label>服务器地址</label>
-                <input type="text" id="serverUrl" class="glass-input">
-                <button id="saveBtn" class="save-btn">保存配置</button>
+                <div class="settings-header">
+                    <span id="settingsTitle">Bark 配置</span>
+                    <button id="backToMain" class="icon-btn" style="width:auto; padding:0 10px; height:28px; font-size:12px;">返回</button>
+                </div>
+                <label id="lblField1">Device Key</label>
+                <input type="text" id="configField1" class="glass-input">
+                <label id="lblField2">服务器地址</label>
+                <input type="text" id="configField2" class="glass-input">
+                <button id="saveBtn" class="save-btn">保存并应用</button>
             </div>
         </div>
 
         <div class="preview-side">
             <div class="phone-frame">
-                <div class="phone-content">
-                    <div id="prevTitle" class="phone-title">标题预览</div>
-                    <div id="prevSubtitle" class="phone-subtitle">副标题</div>
-                    <div id="prevBody" class="phone-body">内容预览...</div>
-                    <img id="prevImage" src="" class="demo-img hidden">
+                <div class="phone-screen">
+                    <div id="viewPreview" class="phone-view active-view">
+                        <div id="prevTitle" class="phone-title">标题预览</div>
+                        <div id="prevSubtitle" class="phone-subtitle">副标题</div>
+                        <div id="prevBody" class="phone-body">内容预览...</div>
+                        <img id="prevImage" src="" class="demo-img hidden">
+                    </div>
+                    <div id="viewHistory" class="phone-view">
+                        <div class="history-header">历史记录</div>
+                        <div id="historyList" class="history-list-container"></div>
+                    </div>
+                </div>
+                <div class="phone-tab-bar">
+                    <div class="tab-item active-tab" id="tabPreview"><span>👁️</span><span>预览</span></div>
+                    <div class="tab-item" id="tabHistory"><span>📜</span><span>历史</span></div>
                 </div>
             </div>
         </div>
