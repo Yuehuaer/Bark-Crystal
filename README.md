@@ -99,11 +99,11 @@
 
 本项目引用了以下优秀的开源项目，特此感谢：
 
-* **[Bark](https://github.com/Finb/Bark)**: 本插件的推送服务依赖于 Bark。感谢 Bark 作者及所有贡献者，欢迎在 GitHub 提交 issue 反馈建议。
+* **[Bark](https://github.com/Finb/Bark)**: 本插件的推送服务依赖于 Bark，感谢 Bark 作者及所有贡献者，欢迎在 GitHub 提交 issue 反馈建议。
 
-* **[消息推送助手](https://messagepush.luckfast.com)**: 本插件的推送服务依赖于消息推送助手。感谢消息推送助手作者。
+* **[消息推送助手](https://messagepush.luckfast.com)**: 本插件的推送服务依赖于消息推送助手，感谢消息推送助手作者。
 
-* **[marked.js](https://github.com/markedjs/marked)**: 本插件的 Markdown 渲染引擎核心。感谢 marked 团队提供的强大解析库，让这个小插件能拥有如此丰富的文本表现力。
+* **[marked.js](https://github.com/markedjs/marked)**: 本插件的 Markdown 渲染引擎核心，感谢 marked 团队提供的强大解析库，让这个小插件能拥有如此丰富的文本表现力。
 
 
 ## 🐣 作者的话 (Note from Author)
